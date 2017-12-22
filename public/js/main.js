@@ -28,7 +28,6 @@ $(document).ready(function() {
 				slidesToShow: 1
 			}
 		}]
-
 	});
 
 	$("#reviewsslider").slick({
@@ -127,6 +126,8 @@ $(document).ready(function() {
 
 });
 
-$(window).on('load', function() {
-	new WOW().init();
-});
+if(location.hash == '#wow') {
+	$(window).on('load', function() {
+		new WOW().init();
+	});
+}
