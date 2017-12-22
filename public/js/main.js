@@ -82,7 +82,6 @@ $(document).ready(function() {
 			$.fancybox.close();
 			$form.trigger('reset');
 			$.fancybox("#success", {padding: 0});
-			yaCounter44570303.reachGoal('call');
 		}
 	});
 
@@ -120,7 +119,6 @@ $(document).ready(function() {
 			$.fancybox.close();
 			$form.trigger('reset');
 			$.fancybox("#success", {padding: 0});
-			yaCounter44570303.reachGoal('master');
 		}
 	});
 
