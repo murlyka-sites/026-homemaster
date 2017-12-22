@@ -43,7 +43,7 @@ gulp.task('image:build', function() {
 gulp.task('spritesmith', function() {
 	var spritesmith = require('gulp.spritesmith');
 
-	var spriteDate = gulp.src('./sprite/*.*')
+	var spriteDate = gulp.src('./source/sprite/*.*')
 		.pipe(spritesmith({
 			imgName: 'sprite.png',
 			cssName: 'sprite.less',
@@ -52,8 +52,8 @@ gulp.task('spritesmith', function() {
 			cssTemplate: 'spritesmith.mustache'
 		}));
 
-	spriteDate.img.pipe(gulp.dest('./images/'));
-	spriteDate.css.pipe(gulp.dest('./less/spritesmith/'));
+	spriteDate.img.pipe(gulp.dest('./public/images/'));
+	spriteDate.css.pipe(gulp.dest('./source/less/spritesmith/'));
 	console.log('finally');
 	
 });
@@ -64,7 +64,7 @@ gulp.task('watch', function() {
 	// watch('./dev/*.html', watchBatch(['html']));
 	//watch('./dev/less/**/*.less', watchBatch(['less']));
 	// watch('./dev/css/*.css', watchBatch(['style']));
-	watch('./sprite/*.png', watchBatch(['spritesmith']));
+	watch('./source/sprite/*.png', watchBatch(['spritesmith']));
 
 	// watch('./dev/js/*.js', watchBatch(['js']));
 });
