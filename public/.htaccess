@@ -1,0 +1,11 @@
+<ifModule mod_headers.c>
+	#кэшировать css, javascript и текстовые файлы на одну неделю
+	<FilesMatch "\.(js|css|txt)$">
+		Header set Cache-Control "max-age=604800"
+	</FilesMatch>
+	
+	#кэшировать флэш и изображения на месяц
+	<FilesMatch "\.(ico|gif|jpg|jpeg|png)$">
+		Header set Cache-Control "max-age=2592000"
+	</FilesMatch>
+</IfModule>
