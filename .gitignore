@@ -1,4 +1,5 @@
 /node_modules/
 /bower/
+/vendor/
 prepros-6.config
 prepros.cfg
