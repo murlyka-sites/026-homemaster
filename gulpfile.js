@@ -1,6 +1,25 @@
 'use strict';
 
-var gulp = require('gulp')
+var gulp = require('gulp'),
+		uglify = require('gulp-uglify'),
+		rename = require('gulp-rename'),
+		concat = require('gulp-concat');
+
+gulp.task('library', function() {
+	gulp.src(['source/lib/*.js'])
+		.pipe(uglify())
+		.pipe(concat('lib.min.js'))
+		.pipe(gulp.dest('public/js/'));
+});
+
+gulp.task('compress', function() {
+	gulp.src(['public/js/main.js'])
+		.pipe(uglify())
+		.pipe(rename({
+			suffix: '.min'
+		}))
+		.pipe(gulp.dest('public/js/'));
+});
 /*
 
 
